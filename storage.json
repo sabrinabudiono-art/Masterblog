@@ -1,0 +1,14 @@
+[
+    {
+        "id": 4,
+        "author": "John Doe",
+        "title": "My First Post",
+        "content": "This works!"
+    },
+    {
+        "id": 5,
+        "author": "Jane Doe",
+        "title": "My Second Post",
+        "content": "Hiiiiiii ;)"
+    }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Blog Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            max-width: 600px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 16px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Blog Post</h1>
+
+    <form action="{{ url_for('update', post_id=post['id']) }}" method="POST">
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" value="{{ post['author'] }}"><br>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="{{ post['title'] }}"><br>
+        <label for="content">Content</label>
+        <input type="text" id="content" name="content" rows="6" value="{{ post['content'] }}"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
